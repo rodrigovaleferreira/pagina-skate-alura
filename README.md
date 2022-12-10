@@ -1,5 +1,4 @@
 # Guia de estilos
-original
 Toda a estilização que será usada no projeto dentro do figma.
 
 [Link do projeto no figma](https://www.figma.com/file/ibWktwVpnog76rMYOdVhks/Dispondo-elementos-com-flexbox-e-grid?node-id=54%3A2358)
@@ -101,3 +100,5 @@ Largura máxima do conteúdo principal: `1120px`
 Largura máxima de um cartão desktop: `256px`
 
 Altura mínima de um cartão: `320px`
+
+original
