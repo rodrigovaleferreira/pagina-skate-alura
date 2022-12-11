@@ -13,9 +13,21 @@
 </head>
 <body>
     <header class="cabecalho">
-        <button class="cabecalho-menu">Menu</button>
-        <img class="cabecalho-logo" src="/img/logo.svg" alt="">
-        <button class="cabecalho-notificacao" >notificação</button>
+        <!-- aria-label para acessibilidade dando um nome para a imagem, uso o i vazio para que com o css adicione uma imagem a ele -->
+        <button class="cabecalho-menu" aria-label="Menu"><i></i></button>
+        <img src="/img/logo.svg" alt="logo hzc" class="cabecalho-logo" >
+        <button class="cabecalho-notificacao" aria-label="notificação"><i></i></button>
     </header>
+    <nav class="menu-lateral">
+        <img src="/img/logo.svg" alt="logo hzc" class="menu-lateral-logo">
+        <a href="#" class="menu-lateral-link menu-lateral-link-inicio menu-lateral-link-ativo">Início</a>
+        <a href="#" class="menu-lateral-link menu-lateral-link-video">Vídeos</a>
+        <a href="#" class="menu-lateral-link menu-lateral-link-picos">Pícos</a>
+        <a href="#" class="menu-lateral-link menu-lateral-link-integrantes">Integrantes</a>
+        <a href="#" class="menu-lateral-link menu-lateral-link-camisas">Camisas</a>
+        <a href="#" class="menu-lateral-link menu-lateral-link-pinturas">Pinturas</a>
+    </nav>
+
+    <script src="/scrpit.js"></script>
 </body>
 </html>
