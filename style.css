@@ -100,3 +100,80 @@ body{
 .menu-lateral-link-pinturas::before{
     content: '\e90a';
 }
+
+.principal{
+padding: 24px 16px;
+}
+
+.titulo-pagina{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.cartao{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+    /* coloca a imagem e o texto lado a lado    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    */
+}
+
+.cartao-conteudo{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.cartao-titulo{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.cartao-perfil{
+    color: #95999C;
+    font-size: 0.9rem;
+}
+
+.cartao-info{
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.cartao-info-tempo::before{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao-info-visualizacao::before{
+    content: "\e90f";
+    margin-right: 8px;
+    height: 13.5px;
+}
+
+.cartao-botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.cartao-botao-play::before{
+    content: '\e90b';
+    font-size: 24px; 
+    margin-right: 8px;
+}
+
+/*grid-column: span 2; (usado para que o elemento ocupe a linha toda, sendo assim o elemento que não tiver essa função ira dividir no meio)*/
+.cartao-conteudo :not(.cartao-info) {
+    grid-column: span 2;
+}
+
