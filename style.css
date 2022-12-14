@@ -65,6 +65,7 @@ body{
     align-self: center;
     width: 118px;
     padding: 16px;
+    margin-top: 80px;
 }
 
 .menu-lateral-link{
@@ -145,6 +146,7 @@ gap: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     */
+    margin-top: 28px;
 }
 
 .cartao-conteudo{
