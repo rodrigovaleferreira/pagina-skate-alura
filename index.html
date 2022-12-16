@@ -16,6 +16,7 @@
         <!-- aria-label para acessibilidade dando um nome para a imagem, uso o i vazio para que com o css adicione uma imagem a ele -->
         <button class="cabecalho-menu" aria-label="Menu"><i></i></button>
         <img src="./img/logo.svg" alt="logo hzc" class="cabecalho-logo" >
+        <p class="cabecalho-perfil">Nome do usuário</p>
         <button class="cabecalho-notificacao" aria-label="notificação"><i></i></button>
     </header>
     <nav class="menu-lateral">
@@ -30,8 +31,9 @@
 
     <main class="principal">
         <h2 class="titulo-pagina">Início</h2>
-        <article class="cartao cartao--destaque">
-            <img src="./img/banner-mobile_1.png" alt="banner cartao" class="cartao-imagem">
+        <article class="cartao cartao--destaque destaque-video">
+            <img src="./img/banner-mobile_1.png" alt="banner cartao" class="cartao-imagem cartao-imagem-mobile">
+            <img src="./img/banner_1.png" alt="banner cartao" class="cartao-imagem cartao-imagem-desktop">
             <div class="cartao-conteudo">
                 <p class="cartao-destaque">Vídeo em destaque</p>
                 <h3 class="cartao-titulo">HZC - titulo</h3>
@@ -42,7 +44,40 @@
             </div>
         </article>
 
-        <section class="secao">
+        <article class="cartao-recentes videos-recentes">
+            <h3 class="cartao-titulo-recentes">Vídeos recentes</h3>
+            <a href="#" class="cartao-link">Ver Todos</a>
+            <ul class="cartao-lista">
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                
+            </ul>
+        </article>
+
+        <section class="secao secao-videos">
             <h3 class="titulo-secao">Vídeos mais vistos</h3>
             <article class="cartao">
                 <img src="./img/video_1.png" alt="video1" class="cartao-imagem">
@@ -82,8 +117,41 @@
             </article>
         </section>
         <h2 class="titulo-pagina" id="camisas" >produtos mais vistos</h2>
-        <article class="cartao cartao--destaque">
-            <img src="./img/banner-mobile_2.png" alt="banner cartao" class="cartao-imagem">
+        <article class="cartao-recentes produtos-recentes">
+            <h3 class="cartao-titulo-recentes">Vídeos recentes</h3>
+            <a href="#" class="cartao-link">Ver Todos</a>
+            <ul class="cartao-lista">
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao-item">
+                    <img src="./img/miniatura_1.png" alt="arte1" class="cartao-item-miniatura">
+                    <h4 class="cartao-item-titulo">HZC - Love machine</h4>
+                    <p class="cartao-item-perfil">Bruno Lopes</p>
+                </li>
+                
+            </ul>
+        </article>
+        <article class="cartao cartao--destaque destaque-produto">
+            <img src="./img/banner-mobile_2.png" alt="banner cartao" class="cartao-imagem cartao-imagem-mobile">
+            <img src="./img/banner_2.png" alt="banner cartao" class="cartao-imagem cartao-imagem-desktop">
             <div class="cartao-conteudo">
                 <p class="cartao-destaque">Nova Arte</p>
                 <h3 class="cartao-titulo">Only Zikas - Lagoa Dompa Club</h3>
@@ -94,8 +162,8 @@
             </div>
         </article>
 
-        <section class="secao">
-            <h3 class="titulo-secao">---</h3>
+        <section class="secao secao-produtos">
+            <h3 class="titulo-secao"></h3>
             <article class="cartao">
                 <img src="./img/produto_1.png" alt="video1" class="cartao-imagem">
                 <div class="cartao-conteudo cartao-conteudo-2">

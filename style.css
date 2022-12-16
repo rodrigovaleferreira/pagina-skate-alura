@@ -13,6 +13,8 @@ body{
 }
 
 
+
+
 .cabecalho {
     display: flex;
     /*pace-around vai colocar um espaçamento igual em volta de cada cartão, mas não necessariamente vai criar um espaçamento igual entre eles.para espaçar igualmente os cartões na vertical, é necessário utilizar a propriedade justify-content*/
@@ -22,7 +24,7 @@ body{
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: fixed;
-    width:92vw;
+    width:100vw;
     z-index: 1;
 }
 /*adicionando os icones na tag i*/
@@ -38,11 +40,19 @@ body{
     content: "\e906";
     font-size: 24px;
     font-family: "icones";
+    margin-right: 30px;
 }
 
 .cabecalho-logo{
     width: 50px;
 }
+
+@media (max-width: 1079px) {
+    .cabecalho-perfil{
+        display: none;
+    }
+}
+
 
 .menu-lateral{
     display: flex;
@@ -120,7 +130,7 @@ body{
 .principal{
 padding: 24px 16px;
 display: grid;
-gap: 16px;
+gap: 10px;
 }
 
 .cartao--destaque{
@@ -128,6 +138,7 @@ gap: 16px;
 }
 
 .titulo-pagina{
+    margin-top: 70px;
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -233,6 +244,10 @@ gap: 16px;
     font-family: "icones";
 }
 
+.cartao-imagem-desktop{
+    display: none;
+}
+
 /*grid-column: span 2; (usado para que o elemento ocupe a linha toda, sendo assim o elemento que não tiver essa função ira dividir no meio)*/
 .cartao-conteudo :not(.cartao-info) {
     grid-column: span 2;
@@ -246,4 +261,175 @@ gap: 16px;
     display: grid;
     gap: 16px;
 }
+
+.cartao-recentes{
+    display: none;
+}
+
+@media screen and (min-width: 1080px) {
+    body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .cabecalho{
+        background-color: #1D232A;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: auto 1fr auto;
+        padding: 16px 60px;
+        box-sizing: border-box;
+    }
+    .cabecalho-logo{
+        display: none;
+    }
+    .cabecalho-perfil{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: flex-end;
+        color: #6e7d88;
+        padding: 8px 32px;
+        border-right: 1px solid #95999C;
+        z-index: -1;
+    }
+
+    .cabecalho-perfil::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(./img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .cabecalho-perfil::after{
+        content: "\e90d";
+        color: white;
+        font-size: 1.5rem;
+        padding-top: 4px;
+    }
+
+    .menu-lateral{
+        width: 20vw;
+        height: 100vh;
+    }
+
+    .principal{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+        "titulo-pagina titulo-pagina titulo-pagina"
+        "destaque-video destaque-video videos-recentes"
+        "secao-videos secao-videos secao-videos"
+        "produtos-recentes destaque-produto destaque-produto"
+        "secao-produtos secao-produtos secao-produtos"
+        ;
+        column-gap: 32px;
+        padding: 32px 60px;
+    }
+
+    .cartao-recentes{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+        align-self: flex-start;
+    }
+
+    .cartao-recentes .cartao-titulo-recentes{
+        grid-column: auto;
+    }
+
+    .cartao-link{
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #0480DC;
+        justify-self: flex-end;
+    }
+
+    .cartao-lista{
+        display: grid;
+        row-gap: 16px;
+        grid-column: span 2;
+    }
+
+    .cartao-item{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+
+    .cartao-item-miniatura{
+        width: 32px;
+        grid-row: span 2;
+    }
+
+    .cartao-item-titulo{
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        font-weight: 700;
+    }
+
+    .cartao-item-perfil{
+        font-size: 0.8rem;
+        color: #95999C;
+    }
+    
+
+    #camisas{
+        display: none;
+    }
+    .cartao-imagem-desktop{
+        display: block;
+        height: 50vh;
+    }
+    .cartao-imagem-mobile{
+        display: none;
+    }
+
+    .cartao--destaque{
+        margin-bottom: 0;
+    }
+    .secao{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .titulo-secao{
+        grid-column: span 4;
+    }
+
+    .destaque-video{
+        grid-area: destaque-video;
+    }
+    
+    .videos-recentes{
+        grid-area: videos-recentes;
+    }
+    
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+    
+    .destaque-produto{
+        grid-area: destaque-produto;
+    }
+    
+    .produtos-recentes{
+        grid-area: produtos-recentes;
+        align-self: center;
+    }
+    
+    .secao-produtos{
+        grid-area: secao-produtos;
+    }
+}
+
+
+
+
 
